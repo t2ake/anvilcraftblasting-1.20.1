@@ -1,0 +1,44 @@
+{
+	"schemaVersion": 1,
+	"id": "anvilcraftblasting",
+	"version": "${version}",
+	"name": "AnvilCraft:Blasting",
+	"description": "铁砧工艺:高炉锻造",
+	"authors": [
+		"t2ake"
+	],
+	"contact": {
+		"issues": "https://github.com/t2ake/anvilcraftblasting/issues",
+		"sources": "https://github.com/t2ake/anvilcraftblasting"
+	},
+	"license": "MIT",
+	"icon": "assets/anvilcraftblasting/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"net.t2ake.anvilcraftblasting.AnvilCraftBlasting"
+		],
+		"client": [
+			"net.t2ake.anvilcraftblasting.AnvilCraftBlastingClient"
+		],
+		"fabric-datagen": [
+			"net.t2ake.anvilcraftblasting.AnvilCraftBlastingDataGenerator"
+		]
+	},
+	"mixins": [
+		"anvilcraftblasting.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.15.7",
+		"minecraft": "~1.20.1",
+		"fabric-api": "*",
+		"AnvilCraftMod": "*"
+	},
+	"custom": {
+		"loom:injected_interfaces": {
+			"net/minecraft/class_1799": [
+				"dev/dubhe/anvilcraft/util/IItemStackInjector"
+			]
+		}
+	}
+}
